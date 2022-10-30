@@ -6,8 +6,9 @@ def main():
     print(c.__str__())
     print(c.get_speed())
     print(c.accelerate())
+    print(c.accelerate())
     print(c.get_speed())
-    print(c.brake())
+    print(c.accelerate())
     print(c.get_speed())
 
 

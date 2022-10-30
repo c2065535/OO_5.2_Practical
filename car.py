@@ -5,8 +5,8 @@ class Car:
         self.brand = brand
 
         self.__speed = 0
-        self.__max_speed = 50
-        
+        self.__top_speed = 10
+
 
     def __str__(self):
         return f'Brand year: {self.year}, Car Brand: {self.brand}'
@@ -15,7 +15,10 @@ class Car:
         return self.__speed
 
     def accelerate(self):
-        self.__speed = self.__speed + 5
+        if self.__speed < self.__top_speed:
+            self.__speed = self.__speed + 5
+        else:
+            self.__speed = self.__top_speed
 
     def brake(self):
-        self.__speed = self.__speed - 5
+            self.__speed = self.__speed - 5
